@@ -3,7 +3,7 @@ local ffi = require "ffi"
 local library_path = (function()
   local dirname = string.sub(debug.getinfo(1).source, 2, #"/fzf_lib.lua" * -1)
   if vim.fn.has("win32") then
-    return dirname .. "../win32dll/libfzf.dll"
+    return dirname .. "../win32/libfzf.dll"
   else
     return dirname .. "../build/libfzf.so"
   end
